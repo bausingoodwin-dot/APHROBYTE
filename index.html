@@ -4,18 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Advanced Tech Website</title>
-  <!-- Google Fonts / Icons -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css">
+  <!-- Three.js for WebGL hero background -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/three.min.js"></script>
 </head>
 <body>
 
-  <!-- Preloader Animation -->
+  <!-- Preloader -->
   <div id="preloader">
     <div class="spinner"></div>
   </div>
 
-  <!-- Header / Navigation -->
+  <!-- Header -->
   <header>
     <div class="logo">TechBrand</div>
     <nav>
@@ -24,7 +27,6 @@
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#products">Products</a></li>
-        <li><a href="#blog">Blog</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -34,8 +36,9 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero Section with 3D Background -->
   <section id="hero">
+    <canvas id="heroCanvas"></canvas>
     <div class="hero-content">
       <h1>Innovate the Future</h1>
       <p>Cutting-Edge Technology Solutions</p>
@@ -44,26 +47,23 @@
         <button>Get a Demo</button>
       </div>
     </div>
-    <div class="hero-background">
-      <!-- Placeholder for video or WebGL animation -->
-    </div>
   </section>
 
-  <!-- About Section -->
+  <!-- About Section with Animated Stats -->
   <section id="about">
     <h2>About Us</h2>
-    <p>Our vision is to revolutionize technology with innovative solutions.</p>
+    <p>We transform ideas into next-gen technology solutions.</p>
     <div class="stats">
       <div class="stat">
-        <h3>10+</h3>
+        <h3 class="counter" data-target="10">0</h3>
         <p>Years</p>
       </div>
       <div class="stat">
-        <h3>300+</h3>
+        <h3 class="counter" data-target="300">0</h3>
         <p>Projects</p>
       </div>
       <div class="stat">
-        <h3>500+</h3>
+        <h3 class="counter" data-target="500">0</h3>
         <p>Clients</p>
       </div>
     </div>
@@ -91,41 +91,18 @@
     </div>
   </section>
 
-  <!-- Products / Portfolio -->
+  <!-- Products Section with Carousel -->
   <section id="products">
     <h2>Products & Portfolio</h2>
-    <div class="product-carousel">
-      <!-- Placeholder for 3D carousel or grid -->
-      <div class="product-card">Product 1</div>
-      <div class="product-card">Product 2</div>
-      <div class="product-card">Product 3</div>
-    </div>
-  </section>
-
-  <!-- Technology Stack -->
-  <section id="tech-stack">
-    <h2>Technology Stack</h2>
-    <div class="tech-icons">
-      <div>AI</div>
-      <div>IoT</div>
-      <div>Cloud</div>
-      <div>Web3</div>
-      <div>Automation</div>
-    </div>
-  </section>
-
-  <!-- Client Testimonials -->
-  <section id="testimonials">
-    <h2>Client Testimonials</h2>
-    <div class="testimonial-slider">
-      <div class="testimonial-card">
-        <p>"Amazing solutions that transformed our business!"</p>
-        <h4>- Client A</h4>
+    <div class="carousel">
+      <div class="carousel-track">
+        <div class="product-card">Product 1</div>
+        <div class="product-card">Product 2</div>
+        <div class="product-card">Product 3</div>
+        <div class="product-card">Product 4</div>
       </div>
-      <div class="testimonial-card">
-        <p>"High-tech innovation with reliable support."</p>
-        <h4>- Client B</h4>
-      </div>
+      <button class="carousel-btn prev">‹</button>
+      <button class="carousel-btn next">›</button>
     </div>
   </section>
 
@@ -142,25 +119,6 @@
 
   <!-- Footer -->
   <footer>
-    <div class="footer-links">
-      <div>
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Contact Info</h4>
-        <p>Email: contact@techbrand.com</p>
-        <p>Phone: +123-456-7890</p>
-      </div>
-      <div>
-        <h4>Follow Us</h4>
-        <p>Twitter | LinkedIn | GitHub</p>
-      </div>
-    </div>
     <p>&copy; 2026 TechBrand. All rights reserved.</p>
   </footer>
 
